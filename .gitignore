@@ -1,0 +1,56 @@
+
+Skip to content
+Pull requests
+Issues
+Codespaces
+Marketplace
+Explore
+@rendeka
+rendeka /
+Random_Walk_2D
+Public
+
+Cannot fork because you own this repository and are not a member of any organizations.
+
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+
+    Settings
+
+Random_Walk_2D/.gitignore
+@rendeka
+rendeka second commit
+Latest commit 3db98a7 Dec 8, 2022
+History
+1 contributor
+25 lines (25 sloc) 174 Bytes
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.dvi
+*.fdb_latexmk
+*.fls
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.lot
+*.nav
+*.nlo
+*.nls
+*.out
+*.toc
+*.vrb
+*.odt
+*.snm
+.*.swp
+*.synctex.gz
+.vs/

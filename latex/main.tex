@@ -1,0 +1,89 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Wenneker Assignment
+% LaTeX Template
+% Version 2.0 (12/1/2019)
+%
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%
+% Authors:
+% Vel (vel@LaTeXTemplates.com)
+% Frits Wenneker
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt]{scrartcl} % Font size
+\input{structure.tex} % Include the file specifying the document structure and custom commands
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{	
+	\normalfont\normalsize
+	\textsc{Faculty of Mathematics and Physics}\\ % Your university, school and/or department name(s)
+	\vspace{25pt} % Whitespace
+	\rule{\linewidth}{0.5pt}\\ % Thin top horizontal rule
+	\vspace{20pt} % Whitespace
+	{\huge 2D Ising model}\\ % The assignment title
+	\vspace{12pt} % Whitespace
+	\rule{\linewidth}{2pt}\\ % Thick bottom horizontal rule
+	\vspace{12pt} % Whitespace
+}
+
+\author{\LARGE Andrej Rendek} % Your name
+
+\date{\normalsize\today} % Today's date (\today) or a custom date
+
+\begin{document}
+\maketitle
+
+\section{Simulation parameters}
+
+For the grid with a length $n = 16$ we have made $N\_INDEP = 1000$ independent simulations, for grids $n = 32$ and $n = 64$ we used just $N\_INDEP = 200$. In each case we used $N\_TSWEEP = 50$ swipes for thermalization and $N\_SWEEP = 500$ swipes for simulation, updating tracked data after each swipe after thermalization.
+
+\section{Results} 
+
+\begin{figure}[h] 
+	\centering
+	\includegraphics[width=0.8\textwidth]{magnetization.png} 
+	\caption{Magnetization in dependence on temperature.}
+	\label{fig:magnetization}
+\end{figure}
+
+
+\begin{figure}[h] 
+	\centering
+	\includegraphics[width=0.8\textwidth]{susceptibility.png} 
+	\caption{Magnetic susceptibility in dependence on temperature.}
+	\label{fig:susceptibility}
+\end{figure}
+
+\begin{figure}[h] 
+	\centering
+	\includegraphics[width=0.8\textwidth]{energy.png} 
+	\caption{Internal energy in dependence on temperature.}
+	\label{fig:energy}
+\end{figure}
+
+\begin{figure}[h] 
+	\centering
+	\includegraphics[width=0.8\textwidth]{specific-heat.png} 
+	\caption{Specific heat in dependence on temperature.}
+	\label{fig:specific-heat}
+\end{figure}
+
+The best estimation of critical temperature $T_c$ corresponding to the maximum of specific heat in \ref{fig:specific-heat} is:
+
+\begin{equation*}
+	T_c = \SI{2.307}{\kelvin}.
+\end{equation*}
+
+\end{document}

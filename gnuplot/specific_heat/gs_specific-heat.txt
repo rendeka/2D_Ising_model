@@ -1,0 +1,27 @@
+reset
+cd 'C:\dev\Simulations\IsingModel\Ising_model\gnuplot\specific_heat'
+set terminal pngcairo size 720, 640 font "Helvetica,18"
+set out '..\..\latex\Figures\specific-heat.png'
+set encoding utf8
+
+data1 = '..\..\output\data_16.dat'
+data2 = '..\..\output\data_32.dat'
+data3 = '..\..\output\data_64.dat'
+
+set autoscale
+set offsets 0, 0.1, 0, 0
+
+set ylabel "Specific heat"
+set xlabel "Temperature"
+
+
+set key box inside left top
+
+set grid
+ 
+p   data1 u 1:4 t 'n = 16' lt rgb 'black' pt 4, \
+    data2 u 1:4 t 'n = 32' lt rgb 'blue' pt 4, \
+    data3 u 1:4 t 'n = 64' lt rgb 'red' pt 4
+
+
+    
